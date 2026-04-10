@@ -38,7 +38,7 @@ const JOURNEYS = [
     price: 49,
     color: "#4A1A6B",
     accent: "#E8B4B8",
-    description: "Explore the high-altitude vineyards of Mendoza and beyond. Argentina's bold reds and aromatic whites are rewriting the rules of South American wine.",
+    description: "Explore the vineyards of Mendoza and beyond. Argentina's bold reds and aromatic whites are rewriting the rules of South American wine.",
     lessons: ["Altitude & Flavor", "The Malbec Revolution", "Argentine Asado Pairings"],
     coords: { x: 28, y: 72 },
     flavorProfile: [8, 3, 6, 8, 6, 5],
@@ -808,12 +808,12 @@ export default function ViaHomepage() {
             lineHeight: 1.7,
           }}>
             Curated wine journeys that transport you to the world's greatest
-            vineyards. Learn, taste, and discover — one bottle at a time.
+            vineyards. Learn, taste, and discover. One bottle at a time.
           </p>
 
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-            <button className="cta-primary">Begin Your Journey →</button>
-            <button className="cta-secondary">Explore the Map</button>
+            <button className="cta-primary" onClick={() => document.getElementById("journeys")?.scrollIntoView({ behavior: "smooth", block: "start" })}>Begin Your Journey →</button>
+            <button className="cta-secondary" onClick={() => document.getElementById("map")?.scrollIntoView({ behavior: "smooth", block: "start" })}>Explore the Map</button>
           </div>
         </div>
 
@@ -892,7 +892,7 @@ export default function ViaHomepage() {
 
         <div style={{ display: "flex", gap: 32, flexWrap: "wrap", justifyContent: "center" }}>
           {[
-            { num: "01", title: "Choose Your Path", desc: "Select a journey that excites your palate. From regional deep-dives to global adventures." },
+            { num: "01", title: "Choose Your Path", desc: "Select a journey that excites your palate. From regional experiences to global adventures." },
             { num: "02", title: "Taste & Learn", desc: "Receive curated bottles with tasting guides, video lessons, and flavor profiles." },
             { num: "03", title: "Level Up", desc: "Track your palate evolution. Unlock new journeys. Become the sommelier you deserve to be." },
           ].map((step, i) => (
@@ -1006,7 +1006,7 @@ export default function ViaHomepage() {
               fontWeight: 300, fontStyle: "italic", lineHeight: 1.5,
               color: "rgba(255,255,255,0.75)", marginBottom: 32,
             }}>
-              VIA transformed the way I think about wine. It's not just tasting — it's understanding. Every journey made me fall deeper in love with the craft.
+              VIA transformed the way I think about wine. It's not just tasting, it's understanding. Every journey made me fall deeper in love with the craft.
             </blockquote>
             <div style={{
               fontFamily: "'DM Sans', sans-serif", fontSize: 13, letterSpacing: 2,
